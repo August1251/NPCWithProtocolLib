@@ -1,12 +1,8 @@
 package org.novikov.protocolliblearn;
 
 import com.comphenix.protocol.ProtocolLibrary;
-import org.bukkit.Bukkit;
-import org.bukkit.Location;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
-
-import java.util.UUID;
 
 public final class Protocolliblearn extends JavaPlugin implements Listener {
 
@@ -14,6 +10,10 @@ public final class Protocolliblearn extends JavaPlugin implements Listener {
     public void onEnable() {
 
         getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
+
+        NPCClickableEvent npcClickelableEvent = new NPCClickableEvent(this, ProtocolLibrary.getProtocolManager());
+
+        npcClickelableEvent.registerEvent();
 
     }
 
