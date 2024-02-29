@@ -1,0 +1,6 @@
+name: protocolliblearn
+version: '${project.version}'
+main: org.novikov.protocolliblearn.Protocolliblearn
+api-version: '1.19'
+softdepend:
+  - ProtocolLib
