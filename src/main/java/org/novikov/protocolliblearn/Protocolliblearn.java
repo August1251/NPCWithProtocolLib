@@ -13,6 +13,8 @@ public final class Protocolliblearn extends JavaPlugin implements Listener {
     @Override
     public void onEnable() {
 
+        getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
+
     }
 
     @Override
